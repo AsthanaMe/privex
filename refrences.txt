@@ -1,0 +1,29 @@
+https://pypi.org/project/privex-pyjwt/
+
+https://stackoverflow.com/questions/33198428/jwt-module-object-has-no-attribute-encode
+
+https://github.com/jpadilla/pyjwt/
+
+https://github.com/jpadilla/pyjwt/issues/374
+
+
+
+
+
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-pkgs.html
+
+
+
+
+[11:38, 24/05/2021] Amit Asthana: https://pypi.org/project/privex-pyjwt/
+[12:24, 24/05/2021] Amit Asthana: pip install privex-pyjwt
+[12:24, 24/05/2021] Amit Asthana: pip install -U 'cryptography>=2.6' ecdsa
+[12:25, 24/05/2021] Amit Asthana: install 'privex-helpers[full]'
+[12:25, 24/05/2021] Amit Asthana: import jwt
+[12:25, 24/05/2021] Amit Asthana: from privex.helpers import KeyManager
+[12:27, 24/05/2021] Amit Asthana: import jwt
+>>> ncoded = jwt.encode({"some": "payload"}, "secret", algorithm="HS256")
+>>> from privex.helpers import KeyManager
+>>> ed_priv, ed_pub = KeyManager.output_keypair('id_ed25519', 'id_ed25519.pub', alg='ed25519')
+>>> import jwt
+>>> token = jwt.encode({'hello': 'world'}, ed_priv, algorithm='EdDSA')
